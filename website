@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home page</title>  
+        
+        <style>
+            
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+                background-color: lightskyblue;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                margin: 5px 150px 5px 150px;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-family: sans-serif;
+                }
+            li a:hover {
+                background-color: darkblue;
+                }   
+            li a.active {
+                background-color: black;
+                }
+            
+            
+            .container {
+                width: 900px;
+                height: 900px;
+                display: block;
+                margin: auto;
+            }
+            .anim {
+                position: relative;
+                animation-iteration-count: 15;
+                animation-name: animation;
+                animation-duration: 30s;
+            }
+            div h1 {
+                margin-left: 320px;
+            }
+            @keyframes animation {
+                0% {
+                    top: 10px;
+                }
+                25% {
+                    top: 500px;
+                }
+                50% {
+                    top: 10px;
+                }
+                75% {
+                    top: 500px;
+                }
+                100% {
+                    top: 10px;
+                }
+            }
+            
+            @media screen and (max-width: 500px) {
+                ul {
+                    width: 300px;
+                }
+                .container {
+                    width: 200px;
+                    height: 200px;
+                }
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="finance.html">Finance</a></li>
+        </ul>
+        
+        <div class="container">
+            <h1>News and Finance</h1>
+            <div class="anim"><img src="news_image.jpg" width="900" height="400"></div>        
+        </div>
+        
+       </body>     
+</html>
